@@ -2,8 +2,10 @@
 
 @{
     ViewBag.Title = "Edit";
-    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    Layout = "~/Views/Shared/_MobileLayoutPage.cshtml";
 }
+
+<h2>Edit</h2>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
@@ -38,8 +40,8 @@
         </div>
 
         <p>
-             @Html.ActionLink("Back to List", "Index", new {@data_role="button", @data_inline="true" })
-            <input type="submit" value="Save" />
+            @Html.ActionLink("Back to List", "Index", null, new {@data_role="button", @data_inline="true" })
+            <input type="submit" value="Save" data-inline="true" }/>
         </p>
     </fieldset>
 }

@@ -224,6 +224,12 @@
   <ItemGroup>
     <Content Include="Views\Mobile\Create.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Mobile\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Mobile\Details.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

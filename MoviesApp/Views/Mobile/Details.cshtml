@@ -1,11 +1,10 @@
 ﻿@model MoviesApp.Models.Movie
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_MobileLayoutPage.cshtml";
 }
 
-<h3>Are you sure you want to delete this?</h3>
 <fieldset>
     <legend>Movie</legend>
 
@@ -30,9 +29,7 @@
         @Html.DisplayFor(model => model.DateReleased)
     </div>
 </fieldset>
-@using (Html.BeginForm()) {
-    <p>
-        <input type="submit" value="Delete" data-inline="true"  /> |
-        @Html.ActionLink("Back to List", "Index", null, new {@data_role="button", @data_inline="true" })
-    </p>
-}
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }, new {@data_role="button", @data_inline="true" }) |
+    @Html.ActionLink("Back to List", "Index", null, new {@data_role="button", @data_inline="true" })
+</p>
