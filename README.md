@@ -1,0 +1,1 @@
+Want to make your site support the mobile web quickly? In this talk I show how to quickly add mobile to an existing website with jQuery Mobile. I also cover an easy way to do mobile device detection and redirection.

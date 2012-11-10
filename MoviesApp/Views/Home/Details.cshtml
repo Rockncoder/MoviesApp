@@ -1,0 +1,37 @@
+﻿@model MoviesApp.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Movie</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Director)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Director)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateReleased)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateReleased)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MoviesApp.Models.Movie>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MobileLayoutPage.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new {@data_ajax="false", @data_role = "button", @data_inline="true", @data_theme="e"})
+</p>
+
+<ul data-role="listview">
+@foreach (var item in Model) {
+    <li>
+        <h3>
+            @Html.DisplayFor(modelItem => item.Title)
+        </h3>
+        <span>
+            @Html.DisplayFor(modelItem => item.Director)
+        </span>
+        <span>
+            @Html.DisplayFor(modelItem => item.DateReleased)
+        </span>
+        <span>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id },  new { @data_role = "button", @data_inline="true", @data_mini="true"}) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id },  new { @data_role = "button", @data_inline="true", @data_mini="true"}) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id },  new { @data_role = "button", @data_inline="true", @data_mini="true"})
+        </span>
+    </li>
+}
+</ul>

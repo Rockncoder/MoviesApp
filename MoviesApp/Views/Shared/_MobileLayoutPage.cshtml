@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+   	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="~/Content/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <script type="text/javascript" src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.mobile-1.1.1.min.js"></script>
+</head>
+<body>
+    <header data-role="header" data-position="fixed">
+        <h2>@ViewBag.Title</h2>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@model MoviesApp.Models.Movie
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_MobileLayoutPage.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Movie</legend>
+        <br />
+
+        <div class="editor-field">
+            @Html.LabelFor(model => model.Title, new { @class = "ui-hidden-accessible" })
+            @Html.TextBoxFor(model => model.Title, new {@placeholder = "Title" })
+        </div>
+
+        <div class="editor-field">
+            @Html.LabelFor(model => model.Director, new { @class = "ui-hidden-accessible" })
+            @Html.TextBoxFor(model => model.Director, new {@placeholder = "Director" })
+        </div>
+
+        <div class="editor-field">
+            @Html.LabelFor(model => model.DateReleased, new { @class = "ui-hidden-accessible" })
+            @Html.TextBoxFor(model => model.DateReleased, new {@placeholder = "Date Released" })
+        </div>
+
+        <p>
+            @Html.ActionLink("Back to List", "Index", null, new {@data_role="button", @data_inline="true" })
+            <input type="submit" value="Create" data-theme="b" data-inline="true" />
+        </p>
+    </fieldset>
+}
